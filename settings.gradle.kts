@@ -18,6 +18,7 @@ rootProject.name = "conference-app-2023"
 include(
     ":app-android",
     ":app-ios-shared",
+    ":baselineprofile",
     ":feature:main",
     ":feature:sessions",
     ":feature:about",
@@ -33,4 +34,3 @@ include(
     ":core:testing",
     ":core:common",
 )
-include(":baselineprofile")

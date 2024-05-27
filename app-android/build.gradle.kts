@@ -91,10 +91,7 @@ android {
             matchingFallbacks += listOf("release")
             isDebuggable = false
             isMinifyEnabled = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
 }
@@ -107,6 +104,8 @@ dependencies {
     implementation(projects.feature.sponsors)
     implementation(projects.feature.floorMap)
     implementation(projects.feature.achievements)
+    baselineProfile(projects.baselineprofile)
+    implementation(libs.profileinstaller)
     implementation(projects.feature.staff)
     implementation(projects.core.model)
     implementation(projects.core.data)
@@ -121,9 +120,4 @@ dependencies {
     implementation(libs.androidxSplashScreen)
     implementation(libs.firebaseDynamicLinks)
     testImplementation(projects.core.testing)
-}
-
-dependencies {
-    baselineProfile(projects.baselineprofile)
-    implementation(libs.profileinstaller)
 }
